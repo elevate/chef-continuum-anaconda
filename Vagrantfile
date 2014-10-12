@@ -28,6 +28,8 @@ Vagrant.configure('2') do |config|
     'Anaconda-1.9.2-Linux-x86_64.sh',
     'Anaconda-2.0.1-Linux-x86.sh',
     'Anaconda-2.0.1-Linux-x86_64.sh',
+    'Anaconda-2.1.0-Linux-x86.sh',
+    'Anaconda-2.1.0-Linux-x86_64.sh',
   ].each do |f|
     if File.exists?(f)
       config.vm.provision :shell do |shell|
@@ -41,7 +43,9 @@ Vagrant.configure('2') do |config|
     chef.json = {
       :anaconda => {
         #:version => '2.0.1',
+        :version => '2.1.0',
         #:flavor => 'x86',
+        :flavor => 'x86_64',
         :accept_license => 'yes',
       }
     }

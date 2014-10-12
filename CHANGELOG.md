@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 0.5.0
+
+- Anaconda 2.1
+- Initial support for [Miniconda](http://conda.pydata.org/miniconda.html)
+
 ## 0.4.4
 
 Backwards-compatible fix for issue when using both the python cookbook and this

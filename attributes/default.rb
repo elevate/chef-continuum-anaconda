@@ -1,5 +1,7 @@
-default.anaconda.version = '2.0.1'
+default.anaconda.version = '2.1.0'
 default.anaconda.flavor = 'x86'
+# standard or mini
+default.anaconda.type = 'standard'
 default.anaconda.installer = {
   '1.8.0' => {
     'x86' => '9eeda2307e9f5c7927ce610fc9dcd632c3d42fab',
@@ -10,6 +12,10 @@ default.anaconda.installer = {
     'x86_64' => '8b3d2800b555c28879f51373ea8ca32c3c79a424',
   },
   '2.0.1' => {
+    'x86' => '7384b070191967f205e7856e9c82396867e22601',
+    'x86_64' => 'd5b0e4e3619bd75fedcb0dafa585886198ec7014',
+  },
+  '2.1.0' => {
     'x86' => '7384b070191967f205e7856e9c82396867e22601',
     'x86_64' => 'd5b0e4e3619bd75fedcb0dafa585886198ec7014',
   },

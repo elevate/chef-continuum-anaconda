@@ -22,7 +22,7 @@ Chef::Log.debug "installer = #{installer}"
 
 remote_file installer_path do
   source "http://09c8d0b2229f813c1b93-c95ac804525aac4b6dba79b00b39d1d3.r79.cf1.rackcdn.com/#{installer}"
-  checksum node.anaconda.installer[version][flavor]
+  checksum node.anaconda.installer.version.flavor
   notifies :run, 'bash[run anaconda installer]', :delayed
   user node.anaconda.owner
   group node.anaconda.group
