@@ -4,8 +4,6 @@
 Vagrant.configure('2') do |config|
   config.vm.hostname = 'anaconda-berkshelf'
   config.vm.box = 'ubuntu/trusty32'
-  #config.vm.box = 'precise32'
-  #config.vm.box_url = 'http://files.vagrantup.com/precise32.box'
   config.vm.network :private_network, ip: '33.33.33.123'
 
   # ssh
@@ -14,8 +12,8 @@ Vagrant.configure('2') do |config|
 
   # plugins
   config.berkshelf.enabled = true
-  #config.berkshelf.berksfile_path = ''
-  config.omnibus.chef_version = :latest
+  # don't use :latest; this will give you chef 12, which is not tested
+  config.omnibus.chef_version = '11.16.4'
 
   # provisioning
 
@@ -42,10 +40,8 @@ Vagrant.configure('2') do |config|
   config.vm.provision :chef_solo do |chef|
     chef.json = {
       :anaconda => {
-        #:version => '2.0.1',
         :version => '2.1.0',
-        #:flavor => 'x86',
-        :flavor => 'x86_64',
+        :flavor => 'x86',
         :accept_license => 'yes',
       }
     }

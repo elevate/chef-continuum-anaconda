@@ -16,6 +16,10 @@ comprehensive testing across multiple platforms, with tests written in
 [serverspec](http://serverspec.org/)
 - [Foodcritic](http://acrmp.github.io/foodcritic/) for style checking
 
+Note that this has **NOT** been tested with [Chef
+12](https://www.chef.io/blog/2014/12/05/release-chef-client-12-0-0/); Chef 11+
+required.
+
 ## Requirements
 
 This repo has only been tested with RVM; YMMV with other installation methods
@@ -44,15 +48,15 @@ $> vagrant up --provision
 ...
 
 $> vagrant ssh
-$vagrant> export PATH=/opt/anaconda/2.0.1/bin:${PATH}
+$vagrant> export PATH=/opt/anaconda/2.1.0/bin:${PATH}
 $vagrant> conda --version
-conda 3.5.5
+conda 3.7.0
 
 # if you included `recipe[anaconda::shell_conveniences]` you don't have to do anything;
 # it's sourced in /etc/profile.d
 $> vagrant ssh
 $vagrant> conda --version
-conda 3.5.5
+conda 3.7.0
 ```
 
 In addition, by default an IPython notebook server is enabled and started:
