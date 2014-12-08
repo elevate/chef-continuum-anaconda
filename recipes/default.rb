@@ -18,11 +18,15 @@ installer_path = "#{Chef::Config[:file_cache_path]}/#{installer}"
 installer_config = 'installer_config'
 installer_config_path = "#{Chef::Config[:file_cache_path]}/#{installer_config}"
 
+installer_version = node.anaconda.version
+installer_flavor = node.anaconda.flavor
+installer_checksum = node.anaconda.installer[installer_version][installer_flavor]
+
 Chef::Log.debug "installer = #{installer}"
 
 remote_file installer_path do
   source "http://09c8d0b2229f813c1b93-c95ac804525aac4b6dba79b00b39d1d3.r79.cf1.rackcdn.com/#{installer}"
-  checksum node.anaconda.installer.version.flavor
+  checksum installer_checksum
   notifies :run, 'bash[run anaconda installer]', :delayed
   user node.anaconda.owner
   group node.anaconda.group
