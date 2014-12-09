@@ -12,8 +12,10 @@ Vagrant.configure('2') do |config|
 
   # plugins
   config.berkshelf.enabled = true
-  # don't use :latest; this will give you chef 12, which is not tested
+  # don't use :latest; this will give you chef 12, which doesn't work with this
+  # vm image
   config.omnibus.chef_version = '11.16.4'
+  #config.omnibus.chef_version = :latest
 
   # provisioning
 

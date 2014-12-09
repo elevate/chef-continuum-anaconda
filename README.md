@@ -16,9 +16,9 @@ comprehensive testing across multiple platforms, with tests written in
 [serverspec](http://serverspec.org/)
 - [Foodcritic](http://acrmp.github.io/foodcritic/) for style checking
 
-Note that this has **NOT** been tested with [Chef
-12](https://www.chef.io/blog/2014/12/05/release-chef-client-12-0-0/); Chef 11+
-required.
+Note that the Vagrant image uses Chef 11 client, while the tests use Chef 12;
+this should not be an issue, and is only because of some installation issue on
+the VM image.
 
 ## Requirements
 

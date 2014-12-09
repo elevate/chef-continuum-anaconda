@@ -16,8 +16,8 @@ default.anaconda.installer = {
     'x86_64' => 'd5b0e4e3619bd75fedcb0dafa585886198ec7014',
   },
   '2.1.0' => {
-    'x86' => '7384b070191967f205e7856e9c82396867e22601',
-    'x86_64' => 'd5b0e4e3619bd75fedcb0dafa585886198ec7014',
+    'x86' => 'fd70c08719e6b5caae45b7c8402c6975a8cbc0e3e2a9c4c977554d1784f28b72',
+    'x86_64' => '191fbf290747614929d0bdd576e330c944b22a67585d1c185e0d2b3a3e65e1c0',
   },
 }
 
